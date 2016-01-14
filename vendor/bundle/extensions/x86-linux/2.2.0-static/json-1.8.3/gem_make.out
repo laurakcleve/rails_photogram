@@ -1,0 +1,4 @@
+/home/vagrant/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160114-32172-ruztim.rb extconf.rb
+creating Makefile
+
+Text file busy @ unlink_internal - ./siteconf20160114-32172-ruztim.rb
