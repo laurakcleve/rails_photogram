@@ -1,4 +1,10 @@
-= simple_form_for @post do |f|
-  = f.input :image
-  = f.input :caption
-  = f.button :submit
+.container
+  .row
+    .col-xs-6
+      = simple_form_for @post do |f|
+        .form-group
+          = f.input :image
+        .form-group
+          = f.input :caption, input_html: { class: 'form-control' }
+        .form-group
+          = f.button :submit
