@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+
   def index
     @posts = Post.all
   end
@@ -8,31 +11,41 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
-    redirect_to posts_path
+    if @post = Post.create(post_params)
+      flash[:success] = "Post successfully created."
+      redirect_to posts_path
+    else
+      flash.now[:alert] = "Post could not be created. Please check the form."
+      render :new
+    end
   end
 
   def show
-    @post = Post.find(params[:id])
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
-    @post.update(post_params)
-    redirect_to(post_path(@post))
+    if @post.update(post_params)
+      flash[:success] = "Post successfully updated."
+      redirect_to posts_path
+    else
+      flash.now[:alert] = "Update failed. Please check the form."
+      render :edit
+    end
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
     redirect_to posts_path
   end
 
   private
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
 
   def post_params
     params.require(:post).permit(:image, :caption)

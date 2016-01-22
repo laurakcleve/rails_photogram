@@ -1,2 +1,43 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.row {
+  max-width: 640px;
+}
+
+.posts-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.post {
+  margin-bottom: 40px;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+}
+
+.post-head {
+  padding-left: 17px;
+}
+
+.post-caption {
+  padding: 17px 0;
+  font-size: 17px;
+  color: #777;
+}
+
+.post-image {
+  width: 640px;
+  margin-left: -1px;
+}
+
+.post-user {
+  padding: 17px;
+  font-size: 14px;
+  color: #999;
+}
+
+.form {
+  margin: 20px 0;
+}
