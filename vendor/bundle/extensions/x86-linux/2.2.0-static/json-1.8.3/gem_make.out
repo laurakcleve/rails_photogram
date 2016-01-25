@@ -1,4 +1,5 @@
-/home/vagrant/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160114-32172-ruztim.rb extconf.rb
+current directory: /vagrant/rails_photogram/vendor/bundle/gems/json-1.8.3/ext/json/ext/generator
+/home/vagrant/.rbenv/versions/2.2.0/bin/ruby -r ./siteconf20160124-1364-3w8wuc.rb extconf.rb
 creating Makefile
 
-Text file busy @ unlink_internal - ./siteconf20160114-32172-ruztim.rb
+Text file busy @ unlink_internal - ./siteconf20160124-1364-3w8wuc.rb

@@ -1,8 +1,9 @@
 .form.row
-  = simple_form_for @post do |f|
-    .form-group
-      = f.input :image
-    .form-group
-      = f.input :caption, input_html: { class: 'form-control' }
-    .form-group.text-center
-      = f.button :submit, class: 'btn-success'
+  .col-xs-12
+    = simple_form_for @post do |f|
+      .form-group
+        = f.input :image
+      .form-group
+        = f.input :caption, input_html: { class: 'form-control' }
+      .form-group.text-center
+        = f.button :submit, class: 'btn-success'
