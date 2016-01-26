@@ -1,10 +1,7 @@
 .container
   .posts-wrapper.row
-    =image_tag @post.image.url(:medium)
-    .post-caption
-      =@post.caption
-    Uploaded by
-    = @post.user.user_name
-    .row
-      .col-xs-12
-        =link_to "Edit", edit_post_path(@post)
+    = render 'post', post: @post
+    - if @post.user.id == current_user.id 
+      .row
+        .col-xs-12
+          = link_to "Edit", edit_post_path(@post)
