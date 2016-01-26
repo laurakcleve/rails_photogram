@@ -7,12 +7,17 @@
   .post-user
     %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
     = post.user.user_name
-  .post-comments
-    - post.comments.each do |comment|
-      %p= comment.user.user_name
-      = comment.content
-      - if comment.user == current_user
-        = link_to "Delete", post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?" }
+  - if post.comments
+    .post-comments
+      - post.comments.each do |comment|
+        .comment
+          .comment-user-name
+            = comment.user.user_name
+          .comment-content
+            = comment.content
+            - if comment.user == current_user
+              .comment-delete
+                = link_to "Delete", post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?" }
   .post-comment-form
     = form_for [post, post.comments.new] do |f|
       = f.text_field :content, placeholder: 'Add a comment...'

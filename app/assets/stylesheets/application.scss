@@ -33,11 +33,40 @@
 }
 
 .post-user {
-  padding: 17px;
+  margin: 17px;
   font-size: 14px;
   color: #999;
 }
 
 .form {
   margin: 20px 0;
+}
+
+.post-comments {
+  margin: 22px 17px;
+}
+
+.comment-user-name {
+  display: inline;
+  margin-right: 10px;
+  color: #337ab7;
+  font-weight: bold;
+}
+
+.comment-content {
+  display: inline;
+}
+
+.comment-delete {
+  float: right;
+}
+
+.post-comment-form {
+  margin: 17px;
+  input {
+    width: 100%;
+    padding: 9px 13px;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+  }
 }
