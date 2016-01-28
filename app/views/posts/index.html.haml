@@ -1,4 +1,3 @@
-.container
-  .posts-wrapper.row
-    -@posts.each do |post|
-      = render 'post', post: post
+.wrapper
+  -@posts.each do |post|
+    = render 'post', post: post

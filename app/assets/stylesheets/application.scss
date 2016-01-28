@@ -1,72 +1,81 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.row {
-  max-width: 640px;
-}
-
-.posts-wrapper {
-  width: 100%;
+.wrapper {
+  max-width: 642px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .post {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   border: 1px solid #e2e2e2;
   border-radius: 6px;
-}
 
-.post-head {
-  padding-left: 17px;
-}
-
-.post-caption {
-  padding: 17px 0;
-  font-size: 17px;
-  color: #777;
-}
-
-.post-image {
-  width: 640px;
-  margin-left: -1px;
-}
-
-.post-user {
-  margin: 17px;
-  font-size: 14px;
-  color: #999;
-}
-
-.form {
-  margin: 20px 0;
-}
-
-.post-comments {
-  margin: 22px 17px;
-}
-
-.comment-user-name {
-  display: inline;
-  margin-right: 10px;
-  color: #337ab7;
-  font-weight: bold;
-}
-
-.comment-content {
-  display: inline;
-}
-
-.comment-delete {
-  float: right;
-}
-
-.post-comment-form {
-  margin: 17px;
-  input {
-    width: 100%;
-    padding: 9px 13px;
-    border: 1px solid #e2e2e2;
-    border-radius: 3px;
+  &-head {
+    padding: 17px;
+    overflow: hidden;  
   }
+
+  &-caption {
+    font-size: 17px;
+    color: #777;
+    overflow-wrap: break-word;
+    float: left;  
+  }
+
+  &-time {
+    float: right;
+    color: #999;
+    font-size: 13px;
+    line-height: 24px;  
+  }
+
+  &-image {
+    margin: 0 auto;
+  }
+
+  &-bottom {
+    padding: 17px;
+  }
+
+  &-user {
+    margin-bottom: 17px;
+    font-size: 14px;
+    color: #999;  
+  }
+
+  &-comments {
+    margin-bottom: 17px;
+  }
+}
+
+.comment {
+  overflow: hidden;
+  clear: both;
+
+  &-username {
+    display: inline;
+    margin-right: 10px;
+    color: #337ab7;
+    font-weight: bold;
+    float: left;
+  }
+
+  &-content {
+    display: inline;
+    float: left;
+  }
+
+  &-delete {
+    float: right;
+  }
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
