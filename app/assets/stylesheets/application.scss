@@ -1,6 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+body {
+  color: #6d6d6d;
+}
+
 .wrapper {
   max-width: 642px;
   margin: 0 auto;
@@ -8,7 +13,7 @@
 
 .post {
   margin-bottom: 50px;
-  border: 1px solid #e2e2e2;
+  border: 1px solid #d0d0d0;
   border-radius: 6px;
 
   &-head {
@@ -71,9 +76,23 @@
   }
 }
 
-.form input[type="text"],
-.form input[type="email"],
-.form input[type="password"] {
+.session-form h2 {
+  margin-bottom: 30px;
+}
+
+.session-form .input {
+  margin-bottom: 20px;
+}
+
+.checkbox input[type="checkbox"] {
+  position: relative;
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
