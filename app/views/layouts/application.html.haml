@@ -7,12 +7,14 @@
 
   %body
 
-    = render 'layouts/navbar'
-          
-    .container
-      - flash.each do |name, msg|
-        = content_tag :div, msg, class: [:alert, alert_for(name)]
+    .page-wrapper
+    
+      = render 'layouts/navbar'
+            
+      .container
+        - flash.each do |name, msg|
+          = content_tag :div, msg, class: [:alert, alert_for(name)]
 
-      = yield
+        = yield
 
-    = render 'layouts/footer'
+      = render 'layouts/footer'
