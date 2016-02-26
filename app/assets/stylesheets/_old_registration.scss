@@ -1,0 +1,42 @@
+.registration, .login {
+  
+  background-image: image-url('registration-bg.jpg');
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 52px;
+  left: 0;
+
+  .registration-wrapper, .login-wrapper {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 15px;
+
+    h2 {
+      margin: 10px 0 20px;
+      text-align: center;
+    }
+
+    .btn {
+      width: 100%;
+      height: 45px;
+      margin-top: 20px;
+      margin-bottom: 0;
+      background-color: #56c0e0;
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+
+  .error_notification {
+    padding: 15px;
+    text-align: center;
+    background-color: #f2dede;
+    color: #b13131;
+  }
+ 
+  .error {
+    margin-left: 10px;
+    color: #b13131;
+  }
+}

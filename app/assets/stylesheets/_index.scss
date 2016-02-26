@@ -1,0 +1,52 @@
+.post {
+  max-width: 642px;
+  margin: 0 auto 50px;
+  border: 1px solid $light-border;
+  border-radius: 4px;
+
+  &__caption {
+    margin: 15px;
+    float: left;
+    font-size: 16px;
+    color: $normal-text;
+  }
+
+  &__time {
+    margin: 15px;
+    float: right;
+    font-size: 13px;
+    color: $light-text;
+    line-height: 22px;
+  }
+
+  &__user {
+    margin: 15px;
+  }
+
+  &__comments {
+    margin-bottom: 15px;
+  }
+
+}
+
+
+.comment {
+  margin: 0 15px 5px 15px;
+
+  &__user {
+    margin-right: 8px;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  &__content {
+    display: inline-block;
+  }
+
+  &__delete {
+    display: inline-block;
+    float: right;
+  }
+
+}
+

@@ -1,9 +1,9 @@
 .comment
-  .comment-username
+  .comment__user
     = comment.user.user_name
-  .comment-content
+  .comment__content
     = comment.content
   - if comment.user == current_user
-    .comment-delete
+    .comment__delete
       = link_to post_comment_path(post, comment), remote: true, method: :delete, data: { confirm: "Are you sure you want to delete this comment?" } do
         %span.glyphicon.glyphicon-remove{"aria-hidden" => "true"}

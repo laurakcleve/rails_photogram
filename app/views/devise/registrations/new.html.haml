@@ -1,11 +1,15 @@
-%h2 Sign up
-= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :user_name, required: true, autofocus: true
-    = f.input :email, required: true
-    = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
-    = f.input :password_confirmation, required: true
-  .form-actions
-    = f.button :submit, "Sign up"
-= render "devise/shared/links"
+.full-bg.full-bg--registration
+  .panel
+    %h2 Join Photogram
+    .form--panel
+      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = f.error_notification
+        .form-group
+          = f.input :email, required: true, autofocus: true, label: false, placeholder: 'Email', input_html: { class: 'input-text' }
+        .form-group
+          = f.input :user_name, required: true, label: false, placeholder: 'User Name', input_html: { class: 'input-text' }
+        .form-group
+          = f.input :password, required: true, label: false, placeholder: 'Password', input_html: { class: 'input-text' }
+        .form-group
+          = f.input :password_confirmation, required: true, label: false, placeholder: 'Confirm Password', input_html: { class: 'input-text' }
+        = f.button :submit, "Sign up", class: 'btn-action btn-action--panel'
