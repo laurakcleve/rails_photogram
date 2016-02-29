@@ -1,4 +1,8 @@
 .form--new-post {
   max-width: 642px;
   margin: 0 auto;
+
+  &__image {
+    margin-bottom: 15px;
+  }
 }

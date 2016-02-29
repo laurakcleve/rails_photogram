@@ -10,9 +10,13 @@
     %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
     = post.user.user_name
 
-  - if post.comments
+  - if post.comments.any?
     .post__comments{id: "comments_#{post.id}"}
-      = render post.comments, post: post
+      .paginator--comments{id: "comments_paginator_#{post.id}"}
+        - unless post.comments.count <= 4
+          = link_to "View all #{post.comments.count} comments", post_comments_path(post), remote: true, class: 'more-comments', data: {post_id: "#{post.id}", type: "html"}
+      = render post.comments.last(4), post: post
 
-  = form_for([post, post.comments.build], remote: true) do |f|
-    = f.text_field :content, placeholder: 'Add a comment...', id: "comment_content_#{post.id}", class: 'input-text'
+  .form--comment
+    = form_for([post, post.comments.build], remote: true) do |f|
+      = f.text_field :content, placeholder: 'Add a comment...', id: "comment_content_#{post.id}", class: 'input-text'

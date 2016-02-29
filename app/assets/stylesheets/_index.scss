@@ -20,7 +20,7 @@
   }
 
   &__user {
-    margin: 15px;
+    margin: 15px 15px 25px;
   }
 
   &__comments {
@@ -50,3 +50,25 @@
 
 }
 
+.paginator--posts {
+  width: 150px;
+  height: 40px;
+  margin: 0 auto 100px;
+  letter-spacing: 1px;
+  text-align: center;
+  background-color: $btn-action;
+  border-radius: 3px;
+
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    color: #fff;
+  }
+}
+
+
+.paginator--comments {
+  margin: 15px;
+}

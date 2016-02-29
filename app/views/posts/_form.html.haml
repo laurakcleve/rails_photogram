@@ -1,5 +1,5 @@
 .form--new-post
-  = image_tag 'placeholder.jpg', id: 'image-preview', class: 'img-responsive'
+  = form_image_select(@post)
   = simple_form_for @post, html: { multipart: true } do |f|
     = f.error_notification
     .form-group

@@ -13,11 +13,19 @@ body {
   color: $normal-text;
 }
 
+a:hover, a:focus {
+  text-decoration: none;
+}
+
 form {
   margin-bottom: 0;
 }
 
 .form--panel {
+  padding: 15px;
+}
+
+.form--comment {
   padding: 15px;
 }
 
