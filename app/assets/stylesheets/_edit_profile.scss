@@ -1,0 +1,28 @@
+.form--edit-profile {
+  max-width: 642px;
+  margin: 0 auto;
+
+  &__avatar {
+
+    img {
+      width: 152px;
+      height: 152px;
+      margin: 0 auto;
+    }
+
+  }
+
+  &__file {
+    width: 270px;
+    margin: 30px auto;
+  }
+
+  &__bio {
+    margin: 80px auto;
+
+    textarea {
+      width: 100%;
+    }
+  }
+
+}

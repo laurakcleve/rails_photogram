@@ -64,6 +64,11 @@ form {
   border-radius: 5px;
 }
 
+textarea {
+  border: 1px solid $light-border;
+  border-radius: 3px;
+}
+
 .btn-action {
   margin-top: 15px;
   padding: 9px 12px;

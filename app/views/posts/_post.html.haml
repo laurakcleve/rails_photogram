@@ -8,7 +8,7 @@
     = link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post)
   .post__user
     %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
-    = post.user.user_name
+    = link_to post.user.user_name, profile_path(post.user.user_name)
 
   - if post.comments.any?
     .post__comments{id: "comments_#{post.id}"}

@@ -1,0 +1,14 @@
+.profile
+  .row
+    .col-xs-6
+      = image_tag @user.avatar.url(:medium), class:'img-responsive img-circle profile__avatar'
+    .col-xs-6
+      %h4.profile__name=@user.user_name
+      - if @user == current_user
+        = link_to 'Edit Profile', edit_profile_path(@user.user_name), class: 'profile__edit-link'
+
+      %p.profile__bio=@user.bio
+
+  .row
+    -@posts.each do |post|
+      = render 'posts/post', post: post
