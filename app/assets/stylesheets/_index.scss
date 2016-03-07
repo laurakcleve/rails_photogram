@@ -21,10 +21,30 @@
 
   &__user {
     margin: 15px 15px 25px;
+    float: left;
+  }
+
+  &__likers {
+    padding: 0 15px 15px;
+    clear: both;
   }
 
   &__comments {
     margin-bottom: 15px;
+    clear: both;
+  }
+
+  &__bottom {
+    margin: 35px 0 0 0;
+  }
+
+  &__like {
+    padding: 10px 0 0 0;
+    font-size: 18px;
+    
+    a {
+      color: $like-heart;
+    }
   }
 
 }
@@ -48,6 +68,12 @@
     float: right;
   }
 
+}
+
+.form--comment {
+  width: 100%;
+  padding: 0 0 15px 0;
+  clear: both;
 }
 
 .paginator--posts {
