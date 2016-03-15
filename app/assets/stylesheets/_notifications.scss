@@ -1,0 +1,43 @@
+.notifications {
+  max-width: 642px;
+  margin: 20px auto;
+
+  ul {
+    margin: 20px 0;
+    padding: 0;
+  }
+  
+  &__item {
+    margin: 10px 0;
+    padding: 12px;
+    list-style: none;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &--unread {
+      border: 1px solid $light-border;
+
+      &__link {
+        float: left;
+        font-weight: bold;
+      }
+    }
+
+    &--read {
+      border: 1px solid $lighter-border;
+      
+      &__link {
+        float: left;
+        color: #8ba3b7;
+      }
+    }
+
+
+    &__time {
+      float: right;
+      color: $light-text;
+    }
+
+  }
+
+}

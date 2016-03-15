@@ -14,10 +14,19 @@
   }
 
   &__edit-link {
+    margin-top: 24px;
     float: right;
   }
 
   &__bio {
     clear: both;
+  }
+
+  &__posts {
+    margin: 110px 0 0 0;
+  
+    h4 {
+      margin-bottom: 30px;
+    }
   }
 }

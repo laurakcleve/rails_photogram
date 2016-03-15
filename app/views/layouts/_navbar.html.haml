@@ -10,6 +10,11 @@
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           %li
+            = render 'notifications/notification_dropdown'
+          %li.nav-profile-link
+            %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
+            = link_to current_user.user_name, profile_path(current_user.user_name), { :class => "nav-profile-link__link" }
+          %li
             = link_to "New Post", new_post_path
           %li
             = link_to "Logout", destroy_user_session_path, method: :delete

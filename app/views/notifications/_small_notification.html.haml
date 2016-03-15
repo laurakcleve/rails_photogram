@@ -1,0 +1,2 @@
+%li.notifications__item--small
+  = link_to "#{notification.notified_by.user_name} has #{notification.notice_type}ed on your post", link_through_path(notification), class: 'notifications__item--small__link'

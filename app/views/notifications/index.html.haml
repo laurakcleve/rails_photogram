@@ -1,0 +1,4 @@
+.notifications
+  %h3 Notifications
+  %ul
+    = render @notifications.order('created_at DESC')

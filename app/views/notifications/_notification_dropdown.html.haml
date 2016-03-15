@@ -1,0 +1,10 @@
+.dropdown.dropdown--notification
+  %button.btn.btn-default.dropdown-toggle{ type: 'button', id: 'dropdownMenu1', data: { toggle: 'dropdown' }, 'ariahaspopup': true, 'aria-expanded': true }
+    = current_user.notifications.where(read: false).count
+    %span.glyphicon.glyphicon-flag
+  %ul.dropdown-menu{ 'aria-labelledby': 'dropdownMenu1' }
+    %li.dropdown-header.text-center Notifications
+    - current_user.notifications.where(read: false).order('created_at DESC').last(5).each do |notification|
+      = render 'notifications/small_notification', notification: notification
+    %li.divider{ role: 'separator' }
+    %li.text-center= link_to 'View All', notifications_path

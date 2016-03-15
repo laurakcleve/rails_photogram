@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   
   def index
     @posts = Post.all.page params[:page]
+    @post_count = Post.all.count
   end
 
   def new
