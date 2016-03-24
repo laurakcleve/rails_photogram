@@ -13,13 +13,45 @@
     float: left;
   }
 
-  &__edit-link {
+  &__action {
     margin-top: 24px;
     float: right;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border: 1px solid $light-border;
+
+    &--edit {
+      color: $light-text
+    }
+
+    &--follow {
+      color: #fff;
+      background-color: $btn-action;
+      border-color: #549fb5;
+
+      &:hover, &:focus {
+        color: #fff;
+      }
+    }
+
+    &--unfollow {
+      background-color: #4fbd4f;
+      color: #fff;
+      border-color: #4e904e;
+
+      &:hover {
+        color: #fff;
+      }
+      
+    }  
   }
+
+  
 
   &__bio {
     clear: both;
+    padding-top: 35px;
   }
 
   &__posts {

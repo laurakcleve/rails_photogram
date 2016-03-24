@@ -5,7 +5,12 @@
     .col-xs-6
       %h4.profile__name=@user.user_name
       - if @user == current_user
-        = link_to 'Edit Profile', edit_profile_path(@user.user_name), class: 'btn btn-default profile__edit-link'
+        = link_to 'Edit Profile', edit_profile_path(@user.user_name), class: 'btn profile__action profile__action--edit'
+      - else
+        - if current_user_is_following(current_user.id, @user.id)
+          = link_to 'Following', unfollow_user_path, remote: true, class: 'btn profile__action profile__action--unfollow', id: 'unfollow-button', method: :post
+        - else
+          = link_to 'Follow', follow_user_path, remote: true, class: 'btn profile__action profile__action--follow', id: 'follow-button', method: :post
 
       %p.profile__bio=@user.bio
 

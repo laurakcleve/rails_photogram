@@ -15,6 +15,8 @@
             %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
             = link_to current_user.user_name, profile_path(current_user.user_name), { :class => "nav-profile-link__link" }
           %li
+            = link_to "Browse Posts", browse_posts_path
+          %li
             = link_to "New Post", new_post_path
           %li
             = link_to "Logout", destroy_user_session_path, method: :delete
