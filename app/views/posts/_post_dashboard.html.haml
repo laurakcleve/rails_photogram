@@ -1,6 +1,9 @@
 #posts
   = render 'posts'
-  
-- if @post_count > 3
+
+%script
+  console.log(#{@posts_count});
+
+- if @posts_count > 3  
   #paginator.paginator--posts
     = link_to_next_page @posts, 'LOAD MORE', remote: true, id: 'load_more'

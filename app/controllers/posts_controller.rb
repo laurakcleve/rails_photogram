@@ -5,8 +5,8 @@ class PostsController < ApplicationController
   before_action :owned_post, only: [:edit, :update, :destroy]
   
   def index
-    @posts = Post.of_followed_users(current_user.following).order('created_at DESC').page params[:page]
-    @post_count = @posts.count
+    @posts = Post.of_followed_users(current_user.following).page params[:page]
+    @posts_count = Post.of_followed_users(current_user.following).count
   end
 
   def new
@@ -47,8 +47,8 @@ class PostsController < ApplicationController
   end
 
   def browse
-    @posts = Post.all.order('created_at DESC').page params[:page]
-    @post_count = Post.all.count
+    @posts = Post.all.page params[:page]
+    @posts_count = Post.all.count
   end
 
   def like
