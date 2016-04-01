@@ -5,8 +5,9 @@ class PostsController < ApplicationController
   before_action :owned_post, only: [:edit, :update, :destroy]
   
   def index
-    @posts = Post.of_followed_users(current_user.following).page params[:page]
-    @posts_count = Post.of_followed_users(current_user.following).count
+    @total_posts = (Post.of_followed_users(current_user.following) + current_user.posts).sort_by(&:created_at).reverse!
+    @posts = Kaminari.paginate_array(@total_posts).page params[:page]
+    @posts_count = @total_posts.count
   end
 
   def new
