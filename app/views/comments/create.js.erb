@@ -1,7 +1,4 @@
-// if (!$('#comments_<%= @post.id %>').length > 0) { 
-//   $('<div id="comments_<%= @post.id %>" class="post__comments"').insertAfter('.post__likers');  
-// }
-
+$('#comments_<%= @post.id %>').addClass('post__comments');
 $('#comments_<%= @post.id %>').append("<%=j render 'comments/comment', post: @post, comment: @comment %>");
 
 $('#comment_content_<%= @post.id %>').val('');

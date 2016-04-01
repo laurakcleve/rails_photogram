@@ -10,14 +10,14 @@
     %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
     = link_to post.user.user_name, profile_path(post.user.user_name)
   
-  .post__likers
+  %div{id: "likers_#{post.id}", class: "#{likers_class post}"}
     = render 'posts/likes', post: post  
 
-  .post__comments{id: "comments_#{post.id}"}
-    - if post.comments.any?
-      = render post.comments.last(4), post: post
+  %div{id: "comments_#{post.id}", class: "#{comments_class post}"}
+    = render post.comments.last(4), post: post
+
   .paginator--comments{id: "comments_paginator_#{post.id}"}
-    - unless post.comments.count <= 4
+    - if post.comments.count > 4
       = link_to "View all #{post.comments.count} comments", post_comments_path(post), remote: true, class: 'more-comments', data: {post_id: "#{post.id}", type: "html"}
 
   .row.post__bottom

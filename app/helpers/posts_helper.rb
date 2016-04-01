@@ -28,6 +28,22 @@ module PostsHelper
     'glyphicon-heart-empty'
   end
 
+  def likers_class(post)
+    if post.votes_for.up.by_type(User).size > 0
+      return 'post__likers'
+    else
+      return ''
+    end
+  end
+
+  def comments_class(post)
+    if post.comments.count > 0
+      return 'post__comments'
+    else
+      return ''
+    end
+  end
+
   private
 
   def like_plural(votes)
