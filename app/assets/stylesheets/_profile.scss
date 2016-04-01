@@ -47,7 +47,18 @@
     }  
   }
 
-  
+  &__stats {
+    margin: 50px 0 0 0;
+    padding: 0;
+    float: left;
+    clear:both;
+
+    li {
+      margin-right: 30px;
+      display: inline;
+      list-style-type: none;
+    }
+  }
 
   &__bio {
     clear: both;

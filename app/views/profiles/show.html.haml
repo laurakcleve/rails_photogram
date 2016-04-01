@@ -12,6 +12,11 @@
         - else
           = link_to 'Follow', follow_user_path, remote: true, class: 'btn profile__action profile__action--follow', id: 'follow-button', method: :post
 
+      %ul.profile__stats
+        %li= pluralize(@user.posts.count, 'post')
+        %li= pluralize(@user.followers.count, 'follower')
+        %li= "#{@user.following.count} following"
+
       %p.profile__bio=@user.bio
 
   .row.profile__posts
