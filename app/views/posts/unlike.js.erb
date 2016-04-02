@@ -7,5 +7,8 @@ like_button
   .attr('href', '/posts/<%= @post.id %>/like');
 
 likers
-  .removeClass('post__likers')
   .html('<%= j (render partial: "posts/likes", locals: { post: @post } ) %>');
+
+if (!likers.children().size()) {
+  likers.removeClass('post__likers');
+}

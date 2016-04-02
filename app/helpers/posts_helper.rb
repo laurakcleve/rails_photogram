@@ -2,7 +2,7 @@ module PostsHelper
 
   def display_likes(post)
     votes = post.votes_for.up.by_type(User)
-    if votes.size > 8
+    if votes.size > 5
       count_likers(votes)
     else
       list_likers(votes)
@@ -10,7 +10,7 @@ module PostsHelper
   end
 
   def count_likers(votes)
-    votes.size.to_s + ' likes'
+    votes.size.to_s + ' people like this'
   end
 
   def list_likers(votes)
@@ -25,35 +25,32 @@ module PostsHelper
 
   def liked_post_link(post)
     if current_user.voted_for? post
-      return unlike_post_path(post.id)
+      unlike_post_path(post.id)
     else
-      return like_post_path(post.id)
+      like_post_path(post.id)
     end
   end
 
   def liked_post_icon(post)
     if current_user.voted_for? post
-      return 'glyphicon-heart'
+      'glyphicon-heart'
     else
-      return 'glyphicon-heart-empty'
+      'glyphicon-heart-empty'
     end
   end
 
   def likers_class(post)
     if post.votes_for.up.by_type(User).size > 0
-      return 'post__likers'
-    else
-      return ''
+      'post__likers'
     end
   end
 
   def comments_class(post)
     if post.comments.count > 0
-      return 'post__comments'
-    else
-      return ''
+      'post__comments'
     end
   end
+
 
   private
 
