@@ -1,4 +1,8 @@
 .notifications
   %h3 Notifications
-  %ul
+  %ul{id: 'notifications'}
     = render @notifications.order('created_at DESC')
+  
+  - if @notifications.total_count > @notifications.default_per_page
+    #paginator
+      = link_to_next_page @notifications, 'Show More', remote: true, id: 'show_more'

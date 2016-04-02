@@ -4,4 +4,7 @@ class Notification < ActiveRecord::Base
   belongs_to :post
 
   validates :user_id, :notified_by_id, :post_id, :notice_type, presence: true
+
+  paginates_per 10
+
 end

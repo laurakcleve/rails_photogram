@@ -1,5 +1,5 @@
 %li{class: "notifications__item notifications__item--#{unread notification}"}
-  = link_to "#{notification.notified_by.user_name} has #{notification.notice_type}ed on your post", link_through_path(notification), class: "notifications__item--#{unread notification}__link"
+  = link_to "#{notification.notified_by.user_name} #{notification.notice_type}ed on your post", link_through_path(notification), class: "notifications__item--#{unread notification}__link"
   .notifications__item__time
     = time_ago_in_words(notification.created_at)
     ago
