@@ -23,9 +23,20 @@ module PostsHelper
     end
   end
 
-  def liked_post(post)
-    return 'glyphicon-heart' if current_user.voted_for? post
-    'glyphicon-heart-empty'
+  def liked_post_link(post)
+    if current_user.voted_for? post
+      return unlike_post_path(post.id)
+    else
+      return like_post_path(post.id)
+    end
+  end
+
+  def liked_post_icon(post)
+    if current_user.voted_for? post
+      return 'glyphicon-heart'
+    else
+      return 'glyphicon-heart-empty'
+    end
   end
 
   def likers_class(post)

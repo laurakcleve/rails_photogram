@@ -2,10 +2,10 @@ var like_button = $('#like_<%= @post.id %>');
 var likers = $('#likers_<%= @post.id %>');
 
 like_button
-  .removeClass('glyphicon-heart-empty')
-  .addClass('glyphicon-heart')
-  .attr('href', '/posts/<%= @post.id %>/unlike');
+  .removeClass('glyphicon-heart')
+  .addClass('glyphicon-heart-empty')
+  .attr('href', '/posts/<%= @post.id %>/like');
 
 likers
-  .addClass('post__likers')
+  .removeClass('post__likers')
   .html('<%= j (render partial: "posts/likes", locals: { post: @post } ) %>');
