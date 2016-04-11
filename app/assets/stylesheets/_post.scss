@@ -1,0 +1,82 @@
+.post {
+  max-width: 642px;
+  margin: 0 auto 50px;
+  border: 1px solid $light-border;
+  border-radius: 4px;
+
+  &__caption {
+    margin: 15px;
+    float: left;
+    font-size: 16px;
+    color: $normal-text;
+  }
+
+  &__time {
+    margin: 15px;
+    float: right;
+    font-size: 13px;
+    color: $light-text;
+    line-height: 22px;
+  }
+
+  &__user {
+    margin: 15px 15px 25px;
+    float: left;
+  }
+
+  &__likers {
+    padding: 0 15px 0 15px;
+    clear: both;
+  }
+
+  &__comments {
+    margin: 15px 0;
+    clear: both;
+  }
+
+  &__show-comments {
+    margin: 0 15px;
+  }
+
+  &__bottom {
+    margin: 35px 0 0 0;
+    clear: both;
+  }
+
+  &__like {
+    padding: 10px 0 0 0;
+    font-size: 18px;
+    
+    a {
+      color: $like-heart;
+    }
+  }
+
+}
+
+
+.comment {
+  margin: 0 15px 5px 15px;
+
+  &__user {
+    margin-right: 8px;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  &__content {
+    display: inline-block;
+  }
+
+  &__delete {
+    display: inline-block;
+    float: right;
+  }
+
+}
+
+.form--comment {
+  width: 100%;
+  padding: 0 0 15px 0;
+  clear: both;
+}

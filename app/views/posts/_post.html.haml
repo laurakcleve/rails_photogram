@@ -16,9 +16,9 @@
   %div{id: "comments_#{post.id}", class: "#{comments_class post}"}
     = render post.comments.last(4), post: post
 
-  .paginator--comments{id: "comments_paginator_#{post.id}"}
+  .post__show-comments{id: "show_comments_#{post.id}"}
     - if post.comments.count > 4
-      = link_to "View all #{post.comments.count} comments", post_comments_path(post), remote: true, class: 'more-comments', data: {post_id: "#{post.id}", type: "html"}
+      = link_to "View all #{post.comments.count} comments", post_comments_path(post), remote: true, class: 'show-comments-link', data: {post_id: "#{post.id}", type: "html"}
 
   .row.post__bottom
     .col-xs-1

@@ -1,0 +1,56 @@
+.full-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 52px;
+  left: 0;
+
+  &--login {
+    background-image: image-url('login-bg.jpg');
+  }
+
+  &--register {
+    background-image: image-url('registration-bg.jpg');
+  }
+}
+
+.panel {
+  max-width: 400px;
+  margin: 50px auto;
+  border-radius: 5px;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.form--panel {
+  padding: 15px;
+
+  &__submit {
+    @extend .btn-action;
+    width: 100%;
+  }
+}
+
+.checkbox input[type="checkbox"] {
+  position: relative;
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+
+.input-checkbox-label {
+  font-weight: normal;
+}
+
+.error_notification {
+  padding: 15px;
+  text-align: center;
+  background-color: $error-bg;
+  color: $error-text;
+}
+
+.error {
+  margin-left: 10px;
+  color: $error-text;
+}

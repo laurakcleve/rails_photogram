@@ -10,4 +10,4 @@
           = f.input :password, required: false, label: false, placeholder: "Password", input_html: { class: 'input-text' }
         .form-group
           = f.input :remember_me, label_html: { class: 'input-checkbox-label' }, as: :boolean if devise_mapping.rememberable?
-        = f.button :submit, "Log in", class: 'btn-action btn-action--panel'
+        = f.button :submit, "Log in", class: 'form--panel__submit'

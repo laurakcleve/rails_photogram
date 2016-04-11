@@ -1,4 +1,4 @@
-.full-bg.full-bg--registration
+.full-bg.full-bg--register
   .panel
     %h2 Join Photogram
     .form--panel
@@ -12,4 +12,4 @@
           = f.input :password, required: true, label: false, placeholder: 'Password', input_html: { class: 'input-text' }
         .form-group
           = f.input :password_confirmation, required: true, label: false, placeholder: 'Confirm Password', input_html: { class: 'input-text' }
-        = f.button :submit, "Sign up", class: 'btn-action btn-action--panel'
+        = f.button :submit, "Sign up", class: 'form--panel__submit'
